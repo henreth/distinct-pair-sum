@@ -1,5 +1,12 @@
 def distinct_pair_sum(arr, k)
-  # type your code in here
+  newArr = []
+  arr.map{|num|
+  nextNum = arr[arr.index(num)+1]
+  if num + nextNum == k
+    newArr.push([num,nextNum])
+  end 
+}
+  newArr.uniq
 end
 
 if __FILE__ == $PROGRAM_NAME
